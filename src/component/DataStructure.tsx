@@ -7,9 +7,10 @@ interface MemoryProps {
     timeStamp: string;
     setTimestamp: React.Dispatch<React.SetStateAction<string>>;
 }
-const DataStructure: React.FC<MemoryProps> = ({ arrayLength, setArrayLength, showArray, setShowArray, timeStamp, setTimestamp }) => {
+const DataStructure: React.FC<MemoryProps> = ({ setArrayLength, setShowArray, timeStamp, setTimestamp }) => {
 
-    const [ds, setDs] = useState<string[]>(["Array", "Linked List", "Stack", "Queue", "Tree", "Heap", "Graph"])
+    // const [ds, setDs] = useState<string[]>(["Array", "Linked List", "Stack", "Queue", "Tree", "Heap", "Graph"])
+    const ds:string[]=["Array", "Linked List", "Stack", "Queue", "Tree", "Heap", "Graph"]
     const [prev, setPrev] = useState<React.MouseEvent<HTMLButtonElement> | null>(null)
     const [noOfElement, setNumberOfElement] = useState<string>('0')
 

@@ -7,12 +7,14 @@ interface MemoryProps {
     timeStamp: string;
     setTimestamp: React.Dispatch<React.SetStateAction<string>>;
 }
-const Memory: React.FC<MemoryProps> = ({ arrayLength, setArrayLength, showArray, setShowArray, timeStamp, setTimestamp }) => {
+const Memory: React.FC<MemoryProps> = ({ arrayLength, showArray, setShowArray, timeStamp }) => {
 
     const [box, setBox] = useState<number[]>([])
     const [num, setNum] = useState<number>(0)
     const [arrElem, setArrElem] = useState<number[]>([])
     useEffect(() => {
+        console.log(num, arrElem);
+        
         let arr = []
         for (let i = 0; i < 512; i++) {
             arr.push(i);
